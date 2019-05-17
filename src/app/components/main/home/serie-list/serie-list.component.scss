@@ -1,0 +1,21 @@
+.main-content {
+    width: 100%;
+
+    table {
+        width: 100%;
+
+        tr.mat-row{
+            &:hover {
+                background: #f9f9f9;
+            }
+        }
+        td.mat-cell {
+            padding-top: 15px !important;
+            cursor: pointer;
+        }
+        th.mat-header-cell {
+            padding-bottom: 10px !important;
+            font-size: 16px;
+        }
+    }
+}

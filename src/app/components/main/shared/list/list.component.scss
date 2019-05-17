@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+
+    tr.mat-row{
+        &:hover {
+            background:#f9f9f9;
+        }
+    }
+    td.mat-cell {
+        padding-top: 15px !important;
+        cursor: pointer;
+    }
+    th.mat-header-cell {
+        padding-bottom: 10px !important;
+        font-size: 16px;
+    }
+}
+.item-actions {
+    padding: 2px;
+    button.mat-icon-button {
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+
+        .mat-icon {
+            font-size: 18px !important;
+        }
+    }
+}

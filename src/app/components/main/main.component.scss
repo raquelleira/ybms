@@ -1,0 +1,28 @@
+.sidenav-container {
+  height: 100%;
+
+    .mat-toolbar {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+
+        .mat-nav-list a{
+            color: white;
+        }
+    }
+
+    .right-sidenav {
+        width: 400px;
+        height: 100%;
+        overflow: scroll;
+        -ms-overflow-style: none;  // IE 10+
+        overflow: -moz-scrollbars-none;  // Firefox
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,37 @@
+<div class="main-content"
+     fxLayout="column"
+     fxLayoutAlign="center center"
+     fxFill>
+  <h1>My Favorites</h1>
+  <div class="list-toggle">
+    <mat-button-toggle-group [value]="isMovieList"
+                              (change)="toogleList()">
+      <mat-button-toggle [value]="true"> Movies </mat-button-toggle>
+      <mat-button-toggle [value]="false"> Series </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <div class="list-container"
+       fxLayout="column"
+       fxLayoutAlign="center stretch">
+    <div *ngIf="isMovieList; else seriesView">
+      <div *ngIf="favorites?.movies.length; else noMovies;">
+        <app-list [list]="favorites.movies"
+                  [listType]="'movies'"
+                  (refreshLists)="refreshLists()"></app-list>
+      </div>
+      <ng-template #noMovies>
+        <span class="favorite">You don't have favorite movies yet!!</span>
+      </ng-template>
+    </div>
+    <ng-template #seriesView>
+      <div *ngIf="favorites?.series.length; else noSeries;">
+        <app-list [list]="favorites.series"
+                  [listType]="'series'"
+                  (refreshLists)="refreshLists()"></app-list>
+      </div>
+      <ng-template #noSeries>
+        <span class="favorite">You don't have favorite series yet!!</span>
+      </ng-template>
+    </ng-template>
+  </div>
+</div>

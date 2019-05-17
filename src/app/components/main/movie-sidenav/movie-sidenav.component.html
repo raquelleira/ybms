@@ -1,0 +1,23 @@
+<div class="sidenav-content"
+     fxLayout="column"
+     fxLayoutAlign="start center"
+     *ngIf="item">
+  <h1>{{item.title || item.name}}</h1>
+  <p>{{item.overview}}</p>
+  <p *ngIf="item.runtime">Duration: {{item.runtime}} mins</p>
+  <a *ngIf="item.homepage" href="{{item.homepage}}" target="_blank">View official homepage</a>
+  <p>Vote Average: {{item.vote_average}}</p>
+  <button mat-flat-button 
+          fxFill
+          (click)="addToFavorites(item)"
+          *ngIf="includeFavorite">Add to my favorites list</button>
+  <button mat-flat-button 
+          fxFill
+          (click)="removeFavorite(item)"
+          *ngIf="!includeFavorite">Remove from my favorites list</button>
+  <button mat-flat-button 
+     color="primary"
+     fxFill
+     (click)="closePanel()">Close</button>
+</div>
+

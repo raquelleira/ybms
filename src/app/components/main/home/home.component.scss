@@ -1,0 +1,22 @@
+.main-header {
+    width: 100%;
+
+    .banner-item {
+        width: 240px;
+        margin: 20px;
+        min-height: auto;
+        cursor: pointer;
+        position: relative;
+        .item-image-container {
+            width: 100%;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+app-serie-list,
+app-movie-list {
+    width: 80%;
+}

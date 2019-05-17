@@ -1,0 +1,15 @@
+.main-content {
+    width: 100%;
+
+    .list-container {
+        width: 80%;
+
+        app-list {
+            width: 80%;
+        }
+        .favorite {
+            display: block;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+<div class="main-content"
+     fxLayout="column"
+     fxLayoutAlign="center stretch"
+     *ngIf="viewLoaded">
+  <div class="main-header"
+       fxLayout="column"
+       fxLayoutAlign="center center"
+       *ngIf="bannerMovie && bannerSerie">
+    <h1>Top Rated</h1>
+    <div class="header-images"
+         fxLayout="row"
+         fxLayoutAlign="center center">
+      <a class="banner-item"
+         href="{{bannerMovie?.homepage}}"
+         target="_blank">
+        <div class="item-image-container">
+          <img src="{{buildImageUrl(bannerMovie.poster_path)}}">
+        </div>
+      </a>
+      <a class="banner-item"
+         href="{{bannerSerie?.homepage}}"
+         target="_blank">
+        <div class="item-image-container">
+          <img src="{{buildImageUrl(bannerSerie.poster_path)}}">
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="main-content"
+       fxLayout="column"
+       fxLayoutAlign="center center"
+       fxFill>
+    <h1>Raquel's Favorites</h1>
+    <div class="list-toggle">
+      <mat-button-toggle-group [value]="isMovieList"
+                                (change)="toogleList()">
+        <mat-button-toggle [value]="true"> Movies </mat-button-toggle>
+        <mat-button-toggle [value]="false"> Series </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <app-movie-list *ngIf="isMovieList"></app-movie-list>
+    <app-serie-list *ngIf="!isMovieList"></app-serie-list>
+  </div>
+</div>

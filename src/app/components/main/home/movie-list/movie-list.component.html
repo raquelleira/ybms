@@ -1,0 +1,8 @@
+<div class="main-content"
+    fxLayout="column"
+    fxLayoutAlign="center stretch">
+  <div *ngIf="movies">
+    <app-list [list]="movies"
+              [listType]="'movies'"></app-list>
+  </div>
+</div>
