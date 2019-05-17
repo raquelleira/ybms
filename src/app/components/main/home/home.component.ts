@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource, MatSort } from '@angular/material';
+import { Component, OnInit } from '@angular/core';
 
 import { MovieService } from '../shared/movie.service';
 import { Movie } from '../shared/models/movie.model';

@@ -1,6 +1,5 @@
-import { Component, OnInit, OnDestroy, ChangeDetectorRef, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, AfterViewInit, AfterViewChecked } from '@angular/core';
 import { SidenavService } from './shared/sidenav.service';
-import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-main',
@@ -23,7 +22,6 @@ export class MainComponent implements OnInit, AfterViewInit, AfterViewChecked {
         this.sidenavMode = this._sidenavService.mode;
         this._startSubscriptions();
     }
-
 
     public ngAfterViewInit(): void {
         this._changeDetectorRef.detectChanges();

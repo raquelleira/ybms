@@ -1,9 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource, MatSort } from '@angular/material';
+import { Component, OnInit } from '@angular/core';
 
 import { Serie } from '../../shared/models/serie.model';
 import { MovieService } from '../../shared/movie.service';
-import { FavoritesService } from '../../shared/favorites.service';
 
 @Component({
   selector: 'app-serie-list',

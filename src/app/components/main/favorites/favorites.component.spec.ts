@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { FavoritesComponent } from './favorites.component';
+import { MatButtonToggleModule } from '@angular/material';
 
 describe('FavoritesComponent', () => {
   let component: FavoritesComponent;
@@ -8,7 +10,9 @@ describe('FavoritesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FavoritesComponent ]
+      declarations: [ FavoritesComponent ],
+      imports: [MatButtonToggleModule],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));

@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SidenavService } from '../shared/sidenav.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Movie } from '../shared/models/movie.model';
 import { Serie } from '../shared/models/serie.model';
 import { Subject } from 'rxjs';
@@ -21,7 +21,6 @@ export class MovieSidenavComponent implements OnInit, OnDestroy {
 
     constructor(
         private _route: ActivatedRoute,
-        private _router: Router,
         private _sidenavService: SidenavService,
         private _favoriteService: FavoritesService,
         private _movieService: MovieService

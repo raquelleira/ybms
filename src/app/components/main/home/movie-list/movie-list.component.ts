@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { Movie } from '../../shared/models/movie.model';
 import { MovieService } from '../../shared/movie.service';
-import { ActivatedRoute } from '@angular/router';
-import { SidenavService } from '../../shared/sidenav.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -15,9 +13,7 @@ export class MovieListComponent implements OnInit {
     public movies: Movie[];
 
     constructor(
-        private _movieService: MovieService,
-        private _route: ActivatedRoute,
-        private _sidenavService: SidenavService
+        private _movieService: MovieService
     ) { }
 
     /**
